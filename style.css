@@ -1,4 +1,5 @@
 * {
+  /* pad */
   margin: 0;
   box-sizing: border-box;
 }
@@ -28,15 +29,68 @@ h3 {
   margin-bottom: 12px;
 }
 
+/*--------- HEADER ---------*/
+header {
+  padding: 64px 24px 24px;
+  background-color: #333;
+  color: #eee;
+}
+
+nav .nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+nav .nav__link:link,
+nav .nav__link:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+nav .nav__link:hover,
+nav .nav__link:active {
+  color: #aaa;
+}
+
+/*--------- BODY ---------*/
 .container {
+  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+}
+
+.blog-post__section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.blog-post__navigation-box {
+  background-color: #ccc;
+}
+
+.blog-post__navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 36px 24px 8px;
+}
+
+.blog-posts {
+  padding: 10px 10px 0;
 }
 
 .blog-post {
   border: 2px solid #ccc;
   padding: 10px 20px 32px;
-  margin-block: 30px;
+  background-color: #fff;
+}
+.blog-post:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .blog-post__title {
@@ -50,6 +104,7 @@ h3 {
 }
 
 .blog-post__img {
+  width: 50%;
   margin-bottom: 10px;
 }
 
@@ -62,4 +117,20 @@ footer > p {
   padding: 10px 18px;
   text-align: center;
   color: #eee;
+}
+
+@media screen and (max-width: 900px) {
+  .blog-post__section {
+    flex-direction: column;
+  }
+
+  .blog-post__navigation {
+    flex-direction: row;
+    align-items: center;
+    padding: 46px;
+  }
+
+  .blog-post__img {
+    width: 100%;
+  }
 }
