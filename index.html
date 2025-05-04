@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./style.css" />
     <title>Blog Posts | Home</title>
   </head>
@@ -40,8 +48,10 @@
             <div class="blog-post">
               <a name="blog-post-1"></a>
               <h2 class="blog-post__title">Post Title 1</h2>
-              <address>By John Doe</address>
-              <time datetime="2024-12-01">December 1,2024</time>
+              <address class="blog-post__author">By John Doe</address>
+              <time class="blog-post__date" datetime="2024-12-01"
+                >December 1,2024</time
+              >
               <p class="blog-post__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 nec odio. Praesent libero.
@@ -69,8 +79,10 @@
             <div class="blog-post">
               <a name="blog-post-2"></a>
               <h2 class="blog-post__title">Post Title 2</h2>
-              <address>By Jane Smith</address>
-              <time datetime="2024-11-25">November 25,2024</time>
+              <address class="blog-post__author">By Jane Smith</address>
+              <time class="blog-post__date" datetime="2024-11-25"
+                >November 25,2024</time
+              >
 
               <p class="blog-post__description">
                 Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
@@ -98,8 +110,10 @@
             <div class="blog-post">
               <a name="blog-post-3"></a>
               <h2 class="blog-post__title">Post Title 3</h2>
-              <address>By Alex Brown</address>
-              <time datetime="2024-11-18">November 18,2024</time>
+              <address class="blog-post__author">By Alex Brown</address>
+              <time class="blog-post__date" datetime="2024-11-18"
+                >November 18,2024</time
+              >
 
               <p class="blog-post__description">
                 Donec lacinia congue felis in faucibus. Cras ultricies mi eu
@@ -131,7 +145,7 @@
 
     <footer>
       <div>
-        <h2>Contact Us</h2>
+        <!-- <h2>Contact Us</h2> -->
         <form action="/submit" method="post">
           <div>
             <label for="name">Your Name:</label>
@@ -156,7 +170,7 @@
 
       <div>
         <h2>Contact Informatio</h2>
-        <table cellspacing="10">
+        <table border="1">
           <thead>
             <tr>
               <th>Day</th>
@@ -188,6 +202,8 @@
           <a href="mailto:info@myblog.com"> info@myblog.com </a>
         </p>
       </div>
+
+      <hr />
 
       <p>&copy;Copyright by Mahmoud Mostafa</p>
     </footer>
