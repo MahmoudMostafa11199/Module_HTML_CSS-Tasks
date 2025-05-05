@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #eee;
   color: #333;
+  overflow-x: hidden;
 }
 
 h1,
@@ -55,6 +60,7 @@ header > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 nav .nav__list {
@@ -73,6 +79,16 @@ nav .nav__link:visited {
 nav .nav__link:hover,
 nav .nav__link:active {
   color: #aaa;
+}
+
+.nav__icon {
+  width: 28px;
+  height: 28px;
+  display: none;
+}
+
+.nav__container:hover .main-nav {
+  display: block !important;
 }
 
 /*------------------ BODY ------------------*/
@@ -178,14 +194,13 @@ footer h2 {
 }
 
 footer form {
+  width: 50%;
   background-color: #ffffff;
   background-image: radial-gradient(#eee 1px, transparent 1px);
   background-size: 20px 20px;
   color: #333;
-  width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   padding: 14px;
-  margin-bottom: 20px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -219,7 +234,7 @@ footer form input[type='submit'] {
 }
 
 footer table {
-  width: 100%;
+  width: 50%;
   background-color: #ffffff;
   background-image: radial-gradient(#eee 1px, transparent 1px);
   background-size: 20px 20px;
@@ -227,7 +242,7 @@ footer table {
   border: 1px solid #999;
   border-radius: 4px;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   overflow: hidden;
 }
 
@@ -251,7 +266,96 @@ footer p a {
 
 /*--------- MEDIA QUERY ---------*/
 @media screen and (max-width: 900px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .blog-post__title {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .blog-post__link {
+    font-size: 12px;
+  }
+
+  .blog-post li {
+    font-size: 12px;
+  }
+
   .blog-post__img {
     width: 100%;
+  }
+
+  footer form,
+  footer table {
+    width: 75%;
+  }
+
+  footer form label {
+    font-size: 12px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .blog-posts {
+    flex-direction: column;
+  }
+
+  .blog-post {
+    width: 75%;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .nav__icon {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background-color: rgba(28, 118, 217, 0.9);
+    font-weight: 700;
+
+    ul {
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+
+  .blog-post {
+    width: 95%;
   }
 }
