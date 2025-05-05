@@ -18,22 +18,24 @@
 
   <body>
     <header>
-      <!-- <h1>My Blog</h1> -->
-      <nav>
-        <ul class="nav__list">
-          <li><a class="nav__link" href="./index.html">Home</a></li>
-          <li><a class="nav__link" href="./blog.html">Blog Posts</a></li>
-          <li><a class="nav__link" href="./contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div>
+        <h1>My Blog</h1>
+        <nav>
+          <ul class="nav__list">
+            <li><a class="nav__link" href="./index.html">Home</a></li>
+            <li><a class="nav__link" href="./blog.html">Blog Posts</a></li>
+            <li><a class="nav__link" href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="blog-post__section">
-        <div class="blog-post__navigation-box">
-          <div class="container">
+        <div class="container">
+          <div class="blog-post__navigation-box">
             <div class="blog-post__navigation">
-              <h1>Blog List</h1>
+              <h2>Blog List</h2>
               <ul>
                 <li><a href="#blog-post-1">Post Title 1</a></li>
                 <li><a href="#blog-post-2">Post Title 2</a></li>
@@ -43,11 +45,13 @@
           </div>
         </div>
 
+        <hr />
+
         <div class="container">
           <div class="blog-posts">
             <div class="blog-post">
               <a name="blog-post-1"></a>
-              <h2 class="blog-post__title">Post Title 1</h2>
+              <h3 class="blog-post__title">Post Title 1</h3>
               <address class="blog-post__author">By John Doe</address>
               <time class="blog-post__date" datetime="2024-12-01"
                 >December 1,2024</time
@@ -67,7 +71,7 @@
               </p>
 
               <div>
-                <h3>Kry Points:</h3>
+                <h4>Kry Points:</h4>
                 <ul>
                   <li>Introduction to the topic</li>
                   <li>Key insights</li>
@@ -78,7 +82,7 @@
 
             <div class="blog-post">
               <a name="blog-post-2"></a>
-              <h2 class="blog-post__title">Post Title 2</h2>
+              <h3 class="blog-post__title">Post Title 2</h3>
               <address class="blog-post__author">By Jane Smith</address>
               <time class="blog-post__date" datetime="2024-11-25"
                 >November 25,2024</time
@@ -98,7 +102,7 @@
                 <a href="#"> this resource </a>
               </p>
               <div>
-                <h3>Important Topics:</h3>
+                <h4>Important Topics:</h4>
                 <ol>
                   <li>Background</li>
                   <li>Analysis</li>
@@ -109,7 +113,7 @@
 
             <div class="blog-post">
               <a name="blog-post-3"></a>
-              <h2 class="blog-post__title">Post Title 3</h2>
+              <h3 class="blog-post__title">Post Title 3</h3>
               <address class="blog-post__author">By Alex Brown</address>
               <time class="blog-post__date" datetime="2024-11-18"
                 >November 18,2024</time
@@ -130,7 +134,7 @@
               </p>
 
               <div>
-                <h3>Takeaways:</h3>
+                <h4>Takeaways:</h4>
                 <ul>
                   <li>Lesson 1</li>
                   <li>Lesson 2</li>
@@ -145,7 +149,7 @@
 
     <footer>
       <div>
-        <!-- <h2>Contact Us</h2> -->
+        <h2>Contact Us</h2>
         <form action="/submit" method="post">
           <div>
             <label for="name">Your Name:</label>
@@ -168,7 +172,7 @@
         </form>
       </div>
 
-      <div>
+      <div class="container">
         <h2>Contact Informatio</h2>
         <table border="1">
           <thead>
@@ -196,12 +200,12 @@
             </tr>
           </tbody>
         </table>
-
-        <p>
-          For further inquiries, you can also email us at
-          <a href="mailto:info@myblog.com"> info@myblog.com </a>
-        </p>
       </div>
+
+      <p>
+        Contact us at
+        <a href="mailto:info@myblog.com"> info@myblog.com </a>
+      </p>
 
       <hr />
 
